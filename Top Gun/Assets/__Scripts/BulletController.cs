@@ -4,41 +4,27 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    // player fires on space bar
-    // == fields ==
-    [SerializeField]
-    private Bullet bulletPrefab;
-
-    [SerializeField]
-    private float bulletSpeed = 5f;
-
-    [SerializeField]
-    private float firingRate = 0.4f;
-
+    // spawn the bullets when the user hits the space bar
+    // give the bullets a speed, and an upwards direction (Vector2(0,1))
+    public GameObject bulletPrefab;
+    public Transform FirePoint;
     
-
+    
     // Update is called once per frame
     void Update()
     {
-        if( Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
         {
-            // start firing
-            InvokeRepeating("Shoot", 0f, firingRate);
-        }
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            // stop firing
-            CancelInvoke("Shoot");
+            Shoot();
         }
     }
 
+    // need a method to create bullet
+    // use invokeRepeating rather CoRoutine
     private void Shoot()
     {
-        Bullet bullet = Instantiate(bulletPrefab);
-        bullet.transform.position = transform.position;
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = Vector2.right * bulletSpeed;
+        Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
     }
+    
 
 }
-
