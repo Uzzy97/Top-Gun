@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public float speed =20f;
-    public Rigidbody2D rb;
+    public float speed = 2.0f;
+    private Rigidbody2D rb;
     public int damage = 25;
     Player target;
 Vector2 moveDirection;
@@ -13,21 +13,25 @@ Vector2 moveDirection;
     void Start()
     {
         rb = GetComponent<Rigidbody2D> ();
-        rb.velocity = transform.right * speed;
         target = GameObject.FindObjectOfType<Player>();
         moveDirection = (target.transform.position - transform.position).normalized * speed;
          rb.velocity = new Vector2 (moveDirection.x, moveDirection.y);
-         Destroy (gameObject, 3f);
+        // Destroy (gameObject, 3f);
+    }
+
+    private void Update()
+    {
+
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         
     Debug.Log (hitInfo.name);
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        Player player = hitInfo.GetComponent<Player>();
+        if (player != null)
         {
-            enemy.takeDamage(damage);
+            player.takeDamage(damage);
         }
 
       Destroy (gameObject);

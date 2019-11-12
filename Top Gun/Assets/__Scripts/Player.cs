@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     // == fields ==
     [SerializeField]    // adds this field to the Unity editor
     private float playerSpeed = 5.0f;
+    public int health =100;
+    public GameObject deathEffect;
 
     // Start is called before the first frame update
     void Start()    // initialisation
@@ -33,6 +35,26 @@ public class Player : MonoBehaviour
         // update the current position
         transform.position = new Vector2(newXPos, newYPos);
     }
+
+    public void takeDamage(int damage )
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+
+    }
+
+    void Die()
+    {
+        Instantiate(deathEffect,  transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+
+
+    private int scoreValue = 10;
 
 
 }
