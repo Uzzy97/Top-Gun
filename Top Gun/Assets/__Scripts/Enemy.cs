@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     // add the collider stuff, to detect if a bullet hits
     // detect the collisiion
     // destroy the bullet prefab, then this prefab
-
+    private int scoreValue = 10;
     public int health =100;
     public GameObject deathEffect;
 
@@ -66,13 +66,8 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Instantiate(deathEffect,  transform.position, Quaternion.identity);
+        ScoreManager.score += scoreValue;
         Destroy(gameObject);
     }
-
-
-
-    private int scoreValue = 10;
-
-    
 
 }

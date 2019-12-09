@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerL2 : MonoBehaviour
 {
+    
      // == fields ==
     [SerializeField]    // adds this field to the Unity editor
     private float playerSpeed = 5.0f;
@@ -59,5 +60,5 @@ public class PlayerL2 : MonoBehaviour
          //  Destroy(gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    private int scoreValue = 10;
+   
 }

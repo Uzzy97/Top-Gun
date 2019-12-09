@@ -163,7 +163,7 @@ MonoBehaviour:
   stoppingDistance: 10
   reatreatDistance: 2
   startTimeBtwShots: 2
-  projectile: {fileID: 2567648076082981338, guid: dc1ee756991ff134c8fbfd405e946bb9,
+  projectile: {fileID: 291263560653410877, guid: 843c95417be80e949a8e8403db4ad5ab,
     type: 3}
   player: {fileID: 6930928494325767626, guid: 4a9b6185e8a5bb5449d7154928203c17, type: 3}
 --- !u!1 &5245795346439430470
@@ -216,6 +216,6 @@ MonoBehaviour:
   stoppingDistance: 10
   reatreatDistance: 2
   startTimeBtwShots: 1
-  projectile: {fileID: 2567648076082981338, guid: dc1ee756991ff134c8fbfd405e946bb9,
+  projectile: {fileID: 291263560653410877, guid: 843c95417be80e949a8e8403db4ad5ab,
     type: 3}
-  player: {fileID: 6930928494325767626, guid: 4a9b6185e8a5bb5449d7154928203c17, type: 3}
+  player: {fileID: 1318408216934200109, guid: 4a9b6185e8a5bb5449d7154928203c17, type: 3}

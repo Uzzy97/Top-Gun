@@ -131,7 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   health: 100
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 5532729349035604015, guid: c76c961dcc4381c4d80cb3cc97a56369,
+    type: 3}
 --- !u!60 &5786643599434538318
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f51b9213089cf545bbca2610206acc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3636779466977870246, guid: bf369bbeb60830546aef5918d6729424,
+  bulletPrefab: {fileID: 4105488258754760142, guid: 7a7246f089b42eb4ba81076920c6ee02,
     type: 3}
   FirePoint: {fileID: 2876190631891737413}
 --- !u!61 &2329796298205650040
